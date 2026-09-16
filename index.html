@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="辰光数字科技 —— 专注于 AI 智能应用与软件开发的数字化服务商，为企业提供官网建设、小程序、AI 智能体定制的一站式解决方案。">
+<title>辰光数字科技 · AI 智能应用与软件开发服务商</title>
+<style>
+:root{
+  --bg:#ffffff; --surface:#f7f8fa; --line:#e8eaef;
+  --text:#1a1d24; --muted:#6b7280; --faint:#9ca3af;
+  --brand:#2f54eb; --brand-deep:#1d39c4; --brand-soft:#eef1fd;
+  --teal:#0f9d76; --amber:#d97706;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;color:var(--text);line-height:1.7;background:var(--bg);-webkit-font-smoothing:antialiased;}
+a{color:inherit;text-decoration:none;}
+img{max-width:100%;display:block;}
+.container{max-width:1140px;margin:0 auto;padding:0 24px;}
+section{padding:80px 0;}
+.section-tag{display:inline-block;font-size:13px;font-weight:600;color:var(--brand);background:var(--brand-soft);padding:4px 14px;border-radius:20px;margin-bottom:16px;}
+h2.section-title{font-size:34px;font-weight:700;line-height:1.3;margin-bottom:12px;}
+.section-sub{color:var(--muted);font-size:16px;max-width:640px;}
+
+/* ===== 顶部导航 ===== */
+.nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px;}
+.logo{display:flex;align-items:center;gap:10px;font-size:20px;font-weight:700;}
+.logo-mark{width:32px;height:32px;border-radius:8px;background:linear-gradient(135deg,var(--brand),#7b5cff);color:#fff;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:700;}
+.nav-links{display:flex;gap:32px;list-style:none;}
+.nav-links a{font-size:15px;color:var(--muted);transition:color .2s;}
+.nav-links a:hover{color:var(--brand);}
+.nav-cta{display:inline-block;background:var(--brand);color:#fff;padding:9px 20px;border-radius:8px;font-size:14px;font-weight:600;transition:background .2s;}
+.nav-cta:hover{background:var(--brand-deep);}
+.menu-toggle{display:none;background:none;border:none;font-size:24px;cursor:pointer;color:var(--text);}
+
+/* ===== Hero ===== */
+.hero{position:relative;overflow:hidden;background:linear-gradient(180deg,#eef1fd 0%,#ffffff 100%);padding:110px 0 90px;}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;}
+.hero h1{font-size:46px;font-weight:800;line-height:1.2;margin-bottom:20px;letter-spacing:-.5px;}
+.hero h1 .hl{color:var(--brand);}
+.hero p.lead{font-size:18px;color:var(--muted);margin-bottom:32px;max-width:520px;}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap;}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 28px;border-radius:10px;font-size:16px;font-weight:600;transition:all .2s;}
+.btn-primary{background:var(--brand);color:#fff;}
+.btn-primary:hover{background:var(--brand-deep);transform:translateY(-2px);}
+.btn-ghost{background:#fff;color:var(--text);border:1px solid var(--line);}
+.btn-ghost:hover{border-color:var(--brand);color:var(--brand);}
+.hero-stats{display:flex;gap:40px;margin-top:40px;}
+.hero-stats .stat b{font-size:28px;font-weight:800;display:block;color:var(--text);}
+.hero-stats .stat span{font-size:13px;color:var(--muted);}
+.hero-visual{background:#fff;border:1px solid var(--line);border-radius:16px;padding:28px;box-shadow:0 20px 50px -20px rgba(47,84,235,.25);}
+.hero-visual .mock-title{font-size:14px;color:var(--muted);margin-bottom:16px;display:flex;align-items:center;gap:8px;}
+.dot{width:10px;height:10px;border-radius:50%;display:inline-block;}
+.dot.r{background:#ff5f57;}.dot.y{background:#febc2e;}.dot.g{background:#28c840;}
+.mock-row{display:flex;gap:12px;margin-bottom:12px;}
+.mock-bar{height:40px;border-radius:8px;background:var(--brand-soft);}
+.mock-bar.w60{width:60%;}.mock-bar.w80{width:80%;}.mock-bar.w45{width:45%;background:#eef1fd;}
+.mock-card{display:flex;gap:12px;margin-top:16px;}
+.mock-chip{flex:1;height:70px;border-radius:10px;background:var(--surface);border:1px solid var(--line);}
+
+/* ===== 通用卡片 ===== */
+.cards{display:grid;gap:24px;}
+.cards-3{grid-template-columns:repeat(3,1fr);}
+.cards-4{grid-template-columns:repeat(4,1fr);}
+.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:28px;transition:all .25s;}
+.card:hover{transform:translateY(-4px);box-shadow:0 16px 40px -16px rgba(47,84,235,.18);border-color:#d4dcf8;}
+.card .icon{width:48px;height:48px;border-radius:12px;background:var(--brand-soft);display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:16px;}
+.card h3{font-size:18px;font-weight:700;margin-bottom:10px;}
+.card p{font-size:14px;color:var(--muted);}
+
+/* ===== 服务列表 ===== */
+.service-list{display:grid;gap:16px;margin-top:40px;}
+.service-item{display:flex;align-items:center;gap:20px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px 24px;transition:all .2s;}
+.service-item:hover{border-color:var(--brand);}
+.service-item .num{font-size:28px;font-weight:800;color:var(--brand-soft);min-width:44px;}
+.service-item h4{font-size:17px;font-weight:700;margin-bottom:4px;}
+.service-item p{font-size:14px;color:var(--muted);}
+.service-item .price{margin-left:auto;font-size:15px;font-weight:700;color:var(--brand);white-space:nowrap;}
+
+/* ===== 流程 ===== */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:40px;}
+.step{position:relative;padding:24px;background:#fff;border:1px solid var(--line);border-radius:14px;}
+.step .step-num{font-size:14px;font-weight:700;color:#fff;background:var(--brand);width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:14px;}
+.step h4{font-size:16px;font-weight:700;margin-bottom:8px;}
+.step p{font-size:13px;color:var(--muted);}
+
+/* ===== CTA 大横幅 ===== */
+.cta-band{background:linear-gradient(135deg,var(--brand),#7b5cff);border-radius:20px;padding:56px 48px;text-align:center;color:#fff;margin:0 24px;}
+.cta-band h2{font-size:32px;font-weight:800;margin-bottom:12px;}
+.cta-band p{font-size:16px;opacity:.9;margin-bottom:28px;}
+.btn-white{background:#fff;color:var(--brand);display:inline-flex;padding:13px 32px;border-radius:10px;font-weight:700;font-size:16px;}
+
+/* ===== 页脚 ===== */
+footer{background:#111827;color:#d1d5db;padding:60px 0 32px;margin-top:80px;}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px;}
+.footer-grid h4{color:#fff;font-size:15px;margin-bottom:16px;font-weight:600;}
+.footer-grid p,.footer-grid a{font-size:14px;color:#9ca3af;line-height:2;}
+.footer-grid a:hover{color:#fff;}
+.footer-brand p{font-size:14px;color:#9ca3af;margin-top:12px;max-width:280px;}
+.copyright{border-top:1px solid #1f2937;padding-top:24px;font-size:13px;color:#6b7280;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+
+/* ===== 响应式 ===== */
+@media(max-width:960px){
+  .hero-grid{grid-template-columns:1fr;}
+  .cards-3,.cards-4,.steps{grid-template-columns:repeat(2,1fr);}
+  .footer-grid{grid-template-columns:1fr 1fr;}
+  .hero h1{font-size:36px;}
+}
+@media(max-width:640px){
+  .nav-links{display:none;}
+  .menu-toggle{display:block;}
+  .cards-3,.cards-4,.steps{grid-template-columns:1fr;}
+  .footer-grid{grid-template-columns:1fr;}
+  .hero h1{font-size:30px;}
+  section{padding:56px 0;}
+  .hero{padding:72px 0 56px;}
+  .service-item .price{margin-left:0;margin-top:6px;}
+  .service-item{flex-direction:column;align-items:flex-start;}
+}
+</style>
+</head>
+<body>
+
+<!-- 导航 -->
+<nav class="nav">
+  <div class="container nav-inner">
+    <a class="logo" href="#home"><span class="logo-mark">辰</span>辰光数字科技</a>
+    <ul class="nav-links">
+      <li><a href="#home">首页</a></li>
+      <li><a href="#about">关于我们</a></li>
+      <li><a href="#services">服务项目</a></li>
+      <li><a href="#process">合作流程</a></li>
+      <li><a href="#contact">联系我们</a></li>
+    </ul>
+    <a class="nav-cta" href="#contact">免费咨询</a>
+    <button class="menu-toggle" aria-label="菜单">☰</button>
+  </div>
+</nav>
+
+<!-- Hero -->
+<header class="hero" id="home">
+  <div class="container hero-grid">
+    <div>
+      <span class="section-tag">AI 驱动的数字化服务商</span>
+      <h1>用 AI 技术，为中小企业<br>打造<span class="hl">专业可信赖</span>的数字形象</h1>
+      <p class="lead">从企业官网、小程序到 AI 智能体，我们以更快的交付、更合理的价格，帮助每一家中小企业拥抱数字化转型。</p>
+      <div class="hero-btns">
+        <a class="btn btn-primary" href="#contact">获取方案报价 →</a>
+        <a class="btn btn-ghost" href="#services">了解服务</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><b>500+</b><span>服务企业客户</span></div>
+        <div class="stat"><b>3 天</b><span>平均交付周期</span></div>
+        <div class="stat"><b>98%</b><span>客户满意度</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="mock-title"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span> chenguang.tech</div>
+      <div class="mock-row"><div class="mock-bar w80"></div></div>
+      <div class="mock-row"><div class="mock-bar w60"></div><div class="mock-bar w45"></div></div>
+      <div class="mock-card"><div class="mock-chip"></div><div class="mock-chip"></div><div class="mock-chip"></div></div>
+    </div>
+  </div>
+</header>
+
+<!-- 关于 -->
+<section id="about">
+  <div class="container">
+    <span class="section-tag">关于我们</span>
+    <h2 class="section-title">让技术回归到解决问题本身</h2>
+    <p class="section-sub">辰光数字科技成立于 2021 年，专注为中小企业提供"用得起、用得好"的数字化服务。我们相信，专业的网站与智能应用不应是大企业的专属。</p>
+    <div class="cards cards-3" style="margin-top:40px;">
+      <div class="card">
+        <div class="icon">⚡</div>
+        <h3>AI 加速交付</h3>
+        <p>借助先进 AI 开发工具，将传统数周的开发周期压缩到数天，成本大幅下降。</p>
+      </div>
+      <div class="card">
+        <div class="icon">🎯</div>
+        <h3>懂业务的交付</h3>
+        <p>不仅做页面，更关注转化与体验，让官网真正成为你获客的入口。</p>
+      </div>
+      <div class="card">
+        <div class="icon">🛡️</div>
+        <h3>长期可靠维护</h3>
+        <p>交付后有持续的技术支持，内容更新、功能迭代随时响应。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 服务 -->
+<section id="services" style="background:var(--surface);">
+  <div class="container">
+    <span class="section-tag">服务项目</span>
+    <h2 class="section-title">一站式数字化解决方案</h2>
+    <p class="section-sub">从展示型官网到功能型应用，按需选择，灵活定制。</p>
+    <div class="service-list">
+      <div class="service-item">
+        <div class="num">01</div>
+        <div>
+          <h4>企业官网建设</h4>
+          <p>响应式设计，适配手机与电脑，支持多栏目定制，3 天快速上线。</p>
+        </div>
+        <div class="price">¥500 起</div>
+      </div>
+      <div class="service-item">
+        <div class="num">02</div>
+        <div>
+          <h4>微信小程序开发</h4>
+          <p>商城、预约、展示类小程序定制，打通微信生态流量。</p>
+        </div>
+        <div class="price">¥2000 起</div>
+      </div>
+      <div class="service-item">
+        <div class="num">03</div>
+        <div>
+          <h4>AI 智能体搭建</h4>
+          <p>智能客服、知识库问答、业务流程自动化，让 AI 为你 24 小时工作。</p>
+        </div>
+        <div class="price">¥3000 起</div>
+      </div>
+      <div class="service-item">
+        <div class="num">04</div>
+        <div>
+          <h4>落地页 / 活动页</h4>
+          <p>营销落地页、H5 活动页快速制作，助力投放与转化。</p>
+        </div>
+        <div class="price">¥300 起</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 流程 -->
+<section id="process">
+  <div class="container">
+    <span class="section-tag">合作流程</span>
+    <h2 class="section-title">四步，轻松开启合作</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h4>需求沟通</h4>
+        <p>告诉我们你的业务与目标，免费评估方案与报价。</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h4>方案设计</h4>
+        <p>确认栏目结构与视觉风格，敲定细节。</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h4>开发上线</h4>
+        <p>AI 加速开发，快速交付并部署上线。</p>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <h4>维护迭代</h4>
+        <p>持续技术维护，内容与功能按需迭代。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="container" id="contact" style="padding-top:40px;">
+  <div class="cta-band">
+    <h2>准备打造你的专业官网了吗？</h2>
+    <p>留下需求，我们将在一个工作日内与你联系，提供免费方案与报价。</p>
+    <a class="btn-white" href="mailto:hello@chenguang.tech">立即咨询</a>
+  </div>
+</div>
+
+<!-- 页脚 -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="logo" href="#home" style="color:#fff;"><span class="logo-mark">辰</span>辰光数字科技</a>
+        <p>专注为中小企业提供 AI 驱动的数字化服务，让技术真正为业务创造价值。</p>
+      </div>
+      <div>
+        <h4>服务</h4>
+        <p><a href="#services">企业官网</a></p>
+        <p><a href="#services">小程序开发</a></p>
+        <p><a href="#services">AI 智能体</a></p>
+      </div>
+      <div>
+        <h4>公司</h4>
+        <p><a href="#about">关于我们</a></p>
+        <p><a href="#process">合作流程</a></p>
+        <p><a href="#contact">联系我们</a></p>
+      </div>
+      <div>
+        <h4>联系方式</h4>
+        <p>邮箱：hello@chenguang.tech</p>
+        <p>微信：chenguang-tech</p>
+        <p>地址：上海市 · 浦东新区</p>
+      </div>
+    </div>
+    <div class="copyright">
+      <span>© 2026 辰光数字科技 · 保留所有权利</span>
+      <span>演示站点 · 仅供学习</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
